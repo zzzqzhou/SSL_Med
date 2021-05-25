@@ -44,13 +44,6 @@ max_iterations = args.max_iterations
 base_lr = args.base_lr
 labelnum = args.labelnum
 
-# if args.deterministic:
-#     cudnn.benchmark = False
-#     cudnn.deterministic = True
-#     random.seed(args.seed)
-#     np.random.seed(args.seed)
-#     torch.manual_seed(args.seed)
-#     torch.cuda.manual_seed(args.seed)
 if not args.deterministic:
     cudnn.benchmark = True
     cudnn.deterministic = False
