@@ -204,25 +204,3 @@ def grouper(iterable, n):
     # grouper('ABCDEFG', 3) --> ABC DEF"
     args = [iter(iterable)] * n
     return zip(*args)
-
-
-# if __name__ == '__main__':
-#     from torchvision import transforms
-#     from torch.utils.data.dataloader import DataLoader
-
-#     patch_size = (96, 96, 96)
-#     base_dir = "/home/ziqi/data/NIH-Pancreas-CT/resampled_data/croped_npz_data"
-#     db_train = Pancreas(base_dir=base_dir,
-#                         split='train',
-#                         # num=16,
-#                         transform=transforms.Compose([
-#                             RandomRotFlip(),
-#                             RandomCrop(patch_size),
-#                             ToTensor(),
-#                         ]))
-#     train_loader = DataLoader(db_train, batch_size=2, shuffle=True, num_workers=4 ,pin_memory=True)
-#     for i, sampled_batch in enumerate(train_loader):
-#         volume_batch, label_batch = sampled_batch['image'], sampled_batch['label']
-#         print(volume_batch.shape, volume_batch.shape)
-#         print(torch.unique(label_batch))
-
