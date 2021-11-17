@@ -7,7 +7,7 @@ import itertools
 from torch.utils.data.sampler import Sampler
 
 class Dataset(Dataset):
-    """ Pancreas Dataset """
+    """ Pancreas/LA Dataset """
     def __init__(self, base_dir=None, split='train', num=None, transform=None):
         self._base_dir = base_dir
         self.transform = transform
